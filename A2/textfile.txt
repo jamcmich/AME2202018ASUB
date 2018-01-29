@@ -69,7 +69,7 @@ Jacob McMichael
 		    16 + 6 | 16 + 2 | 208 + 5
 
 	    	      ANSWER  #1602d5  ANSWER
-	
+
 	---	          rgb(12, 126, 252)		---
 
 	    		   12 | 126 | 252
@@ -109,7 +109,6 @@ Jacob McMichael
 		0 + 12 | 112 + 11 | 112 + 12 | 0 + 4
 
 	    	      ANSWER  #0c7b7c04  ANSWER
-
 
 	      		       TASK 3
 
