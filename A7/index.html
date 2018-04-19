@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Assignment 7</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Animate CSS</h1>
+    </header>
+
+    <select id="selector" name="selector" onchange="makeSelection()">
+      <option value="" selected>Make Selection</option>
+      <option value="bounce">Bounce</option>
+      <option value="flash">Flash</option>
+      <option value="tada">Ta-Da!</option>
+      <option value="fadein">FadeIn</option>
+      <option value="fadeout">FadeOut</option>
+    </select>
+
+    <div id="object"></div>
+
+    <style>
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      #selector {
+        margin: auto;
+        margin-top: 25px;
+        margin-left: 42.5%;
+        width: 15%;
+      }
+
+      #object {
+        background-color: red;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        border-radius: 50%;
+      }
+    </style>
+
+    <script>
+      function makeSelection() {
+        var value = document.getElementById("selector").value;
+        console.log(value);
+
+        if (value == "") {
+          document.getElementById("object").removeAttribute("class");
+        }
+
+        if (value == "bounce") {
+          document.getElementById("object").removeAttribute("class");
+          document.getElementById("object").classList.add("animated", "infinite", "bounce");
+        }
+
+        if (value == "flash") {
+          document.getElementById("object").removeAttribute("class");
+          document.getElementById("object").classList.add("animated", "infinite", "flash");
+        }
+
+        if (value == "tada") {
+          document.getElementById("object").removeAttribute("class");
+          document.getElementById("object").classList.add("animated", "infinite", "tada");
+        }
+
+        if (value == "fadein") {
+          document.getElementById("object").removeAttribute("class");
+          document.getElementById("object").classList.add("animated", "infinite", "fadeIn");
+        }
+
+        if (value == "fadeout") {
+          document.getElementById("object").removeAttribute("class");
+          document.getElementById("object").classList.add("animated", "infinite", "fadeOut");
+        }
+      }
+    </script>
+  </body>
+</html>
