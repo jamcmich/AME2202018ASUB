@@ -12,12 +12,15 @@
     </header>
 
     <select id="selector" name="selector" onchange="makeSelection()">
-      <option value="" selected>Make Selection</option>
+      <option value="none" selected>Make Selection</option>
       <option value="bounce">Bounce</option>
       <option value="flash">Flash</option>
-      <option value="tada">Ta-Da!</option>
-      <option value="fadein">FadeIn</option>
-      <option value="fadeout">FadeOut</option>
+      <option value="pulse">Pulse</option>
+      <option value="rubberBand">Rubber Band</option>
+      <option value="shake">Shake</option>
+      <option value="tada">Ta-Da</option>
+      <option value="wobble">Wobble</option>
+      <option value="jello">Jello</option>
     </select>
 
     <div id="object"></div>
@@ -51,7 +54,7 @@
         var value = document.getElementById("selector").value;
         console.log(value);
 
-        if (value == "") {
+        if (value == "none") {
           document.getElementById("object").removeAttribute("class");
         }
 
@@ -65,19 +68,34 @@
           document.getElementById("object").classList.add("animated", "infinite", "flash");
         }
 
+        if (value == "pulse") {
+          document.getElementById("object").removeAttribute("class");
+          document.getElementById("object").classList.add("animated", "infinite", "pulse");
+        }
+
+        if (value == "rubberBand") {
+          document.getElementById("object").removeAttribute("class");
+          document.getElementById("object").classList.add("animated", "infinite", "rubberBand");
+        }
+
+        if (value == "shake") {
+          document.getElementById("object").removeAttribute("class");
+          document.getElementById("object").classList.add("animated", "infinite", "shake");
+        }
+
         if (value == "tada") {
           document.getElementById("object").removeAttribute("class");
           document.getElementById("object").classList.add("animated", "infinite", "tada");
         }
 
-        if (value == "fadein") {
+        if (value == "wobble") {
           document.getElementById("object").removeAttribute("class");
-          document.getElementById("object").classList.add("animated", "infinite", "fadeIn");
+          document.getElementById("object").classList.add("animated", "infinite", "wobble");
         }
 
-        if (value == "fadeout") {
+        if (value == "jello") {
           document.getElementById("object").removeAttribute("class");
-          document.getElementById("object").classList.add("animated", "infinite", "fadeOut");
+          document.getElementById("object").classList.add("animated", "infinite", "jello");
         }
       }
     </script>
